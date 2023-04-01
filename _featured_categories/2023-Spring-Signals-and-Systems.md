@@ -3,8 +3,8 @@ layout: list
 title: Example Content
 sitemap: false
 hide_last_modified: true
-menu: true
-slug: test
+menu: false
+categories: [Signals-and-Systems]
 ---
 
-# Test.md
+# [2023] Signals and Systems
