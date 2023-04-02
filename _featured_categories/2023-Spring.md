@@ -9,9 +9,6 @@ description: >
 
 # (Optional) You can disable grouping posts by date.
 no_groups: true
-no_order: true
-hide_date: true
-hide_last_modified: true
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
