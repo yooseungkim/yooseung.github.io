@@ -1,7 +1,7 @@
 ---
 layout: list
 title: 2023 Spring
-permalink: 2023-spring
+permalink: /2023-spring/
 slug: 2023-spring
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
