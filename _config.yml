@@ -45,7 +45,7 @@ author:
   email: <yooseungkim@gm.gist.ac.kr>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
-
+favicon: /assets/img/me.jpg
 # Add links to the sidebar.
 menu:
   - title: 2023 Spring
