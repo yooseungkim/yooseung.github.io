@@ -4,7 +4,7 @@ title: Signals and Systems
 description: >
   Signals and Systems
 tags: [2023-spring]
-slug: ss
+slug: Signals-and-Systems
 sitemap: false
 no_groups: true
 hide_last_modified: true
