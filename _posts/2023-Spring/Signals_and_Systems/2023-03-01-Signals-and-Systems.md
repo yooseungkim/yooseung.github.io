@@ -2,7 +2,13 @@
 layout: list
 title: Signals and Systems
 description: >
-  Signals and Systems
+  [EC3202] Signals and Systems\\
+
+  Instructor: Hae-gon Jeon\\
+
+  Textbook: *Signals and Systems 2nd Edition* by Alan Oppenheim *et. al.*\\
+
+  All contents are based on the textbook and lecture notes
 tags: [2023-spring]
 slug: Signals-and-Systems
 sitemap: false
