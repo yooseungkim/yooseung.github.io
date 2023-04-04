@@ -94,7 +94,7 @@ $$
 ### Stability
 
 - A system is stable if output is bounded for all input signal
-- Formally, $\forall x: |x|<U\rightarrow|y|<V$ : for bounded input, output must be bounded
+- Formally, $$\forall x: \|x\|<U \rightarrow\|y\|<V$$ : for bounded input, output must be bounded
 - Although only one bounded input signal makes output unbounded, then the system is unstable
 - $y[n]=x[n]+1.01y[n-1]$ is unstable since it grows without bound
   - if $x[n] = \delta[n]$, then $0  \le x\le 1$ (bounded)
