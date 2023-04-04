@@ -9,13 +9,13 @@ permalink: /2023-spring/signals-and-systems/convolution-in-ct
 
 ## Recall: Convolution in D.T.
 
-For LTI system, $h[n]$ denote the impulse response to the signal $\delta[n]$. Thanks to superposition, general input signal $x[n]$ can be written as
+For LTI system, $$h[n]$$ denote the impulse response to the signal $$\delta[n]$$. Thanks to superposition, general input signal $$x[n]$$ can be written as
 
 $$
 x[n]=\sum_{k=-\infty}^\infty x[k]\delta[n-k]
 $$
 
-It can be easily observed that $x[k]\delta[n-k]= x[n]$ if $k=n$.
+It can be easily observed that $$x[k]\delta[n-k]= x[n]$$ if $$k=n$$.
 
 Also, the output of signal is given by the convolution sum
 
@@ -44,19 +44,19 @@ $$
 
 Thin, delayed pulse
 
-Since $\Delta\delta_\Delta$ has unit amplitude, we have
+Since $$\Delta\delta_\Delta$$ has unit amplitude, we have
 
 $$
 x(t) =\sum_{k=-\infty}^{\infty}x(k\Delta)\delta_\Delta(t-k\Delta)\Delta
 $$
 
-For any value of $t$, only one pulse $x(k\Delta)\delta_\Delta(t-k\Delta)$ is non-zero. When $\Delta\rightarrow 0$, the summation approaches an integral,
+For any value of $$t$$, only one pulse $$x(k\Delta)\delta_\Delta(t-k\Delta)$$ is non-zero. When $$\Delta\rightarrow 0$$, the summation approaches an integral,
 
 $$
 \begin{equation}x(t) =\int_{-\infty}^{\infty}x(\tau)\delta(t-\tau)d\tau\end{equation}
 $$
 
-We refer to $(1)$ as a **sifting property** of continous impulse.
+We refer to $$(1)$$ as a **sifting property** of continous impulse.
 
 ### Alternative Derivation
 
@@ -75,8 +75,8 @@ $$
 \end{equation}
 $$
 
-From $(2)$, we have $x(\tau)\delta(t-\tau)=0$ for $t  \neq \tau$.
-Therefore, from $(3)$, we have
+From $$(2)$$, we have $$x(\tau)\delta(t-\tau)=0$$ for $$t  \neq \tau$$.
+Therefore, from $$(3)$$, we have
 
 $$
 \begin{align*}
@@ -92,7 +92,7 @@ This derivation emphasises the relationship between the structure for both discr
 
 ### Example 1
 
-Consider a LTI system of input signal $x(t)$ and the impulse response $h(t)$
+Consider a LTI system of input signal $$x(t)$$ and the impulse response $$h(t)$$
 
 $$
 x(t)=e^{-at}u(t) \;\;\;(a>0)\\
@@ -107,15 +107,15 @@ y(t)&=\int_{-\infty}^{\infty}x(\tau)h(t-\tau)d\tau\\
 &=\int_0^{\infty}e^{-at}h(t-\tau)d\tau\end{align*}
 $$
 
-For $t <0$, $h(t-\tau) = 0$, therefore, we have $y(t)=0$ ($t<0)$
+For $$t <0$$, $$h(t-\tau) = 0$$, therefore, we have $$y(t)=0$$ ($$t<0)$$
 
-If $t\ge0$, then $h(t-\tau) =1$ if $\tau \le t$. Therefore,
+If $$t\ge0$$, then $$h(t-\tau) =1$$ if $$\tau \le t$$. Therefore,
 
 $$
 y(t) = \int_0^\infty e^{-a\tau}h(t-\tau) = \int_0^t e^{-a\tau} = \frac{1}{a}\big(1-e^{-at}\big)
 $$
 
-By combining $y(t)$ for both $t \ge 0$ and $t<0$, we have
+By combining $$y(t)$$ for both $$t \ge 0$$ and $$t<0$$, we have
 
 $$
 y(t)=\frac{1}{a}(1-e^{-at})u(t)
@@ -130,7 +130,7 @@ x(t) = e^{2t}u(-t)\\
 h(t)=u(t-3)
 $$
 
-The convolution integral of $x(t)$ and $y(t)$ becomes
+The convolution integral of $$x(t)$$ and $$y(t)$$ becomes
 
 $$
 \begin{align*}
@@ -139,19 +139,19 @@ y(t) &= \int_{-\infty}^{\infty}x(\tau)h(t-\tau)d\tau\\
 \end{align*}
 $$
 
-For $t\ge 3$, $t-\tau\ge 3$ ($\because -\infty < \tau \le 0)$, therefore
+For $$t\ge 3$$, $$t-\tau\ge 3$$ ($$\because -\infty < \tau \le 0)$$, therefore
 
 $$
-y(t) = \int_{-\infty}^{0}e^{2\tau}d\tau = \frac{1}{2}e^{2\tau}\bigg|_{-\infty}^{0} = \frac{1}{2}
+y(t) = \int_{-\infty}^{0}e^{2\tau}d\tau = \frac{1}{2}e^{2\tau}\bigg\|_{-\infty}^{0} = \frac{1}{2}
 $$
 
-For $t < 3$, $h(t-\tau) =1$ only if $\tau \le t-3$. Therefore,
+For $$t < 3$$, $$h(t-\tau) =1$$ only if $$\tau \le t-3$$. Therefore,
 
 $$
-y(t) = \int_{-\infty}^{t-3} e^{2\tau}d\tau = \frac{1}{2}e^{2\tau}\bigg|^{t-3}_\infty = \frac{1}{2}e^{2t-6}
+y(t) = \int_{-\infty}^{t-3} e^{2\tau}d\tau = \frac{1}{2}e^{2\tau}\bigg\|^{t-3}_\infty = \frac{1}{2}e^{2t-6}
 $$
 
-Therefore, the convolution of the signals $x(t)$ and $h(t)$ is
+Therefore, the convolution of the signals $$x(t)$$ and $$h(t)$$ is
 
 $$
 y(t) = \begin{cases}\frac{1}{2} &t \ge 3\\

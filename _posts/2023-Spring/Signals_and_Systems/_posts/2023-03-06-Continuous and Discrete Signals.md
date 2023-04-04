@@ -27,18 +27,18 @@ permalink: /2023-spring/signals-and-systems/ct-and-dt
 ### Total Energy
 
 - Total Energy of a signal is given by
-  - $$E = \int_{t_1}^{t_2} \|x(t)\|^2 \ dt$$ for continuous time signal $$x(t)$$
-  - $$E = \sum_{n=n_1}^{n_2} \|x[n]\|^2$$for discrete time signal $$x[n]$$
+  - $$E = \int_{t_1}^{t_2} \\|x(t)\\|^2 \ dt$$ for continuous time signal $$x(t)$$
+  - $$E = \sum_{n=n_1}^{n_2} \\|x[n]\\|^2$$for discrete time signal $$x[n]$$
 - Average power $$P$$ can be computed by dividing $$E$$ by $$(t_2-t_1)$$ and $$(n_2-n_1+1)$$
 
 ### Energy and Power over Infinite Time
 
 - Total energy over an infinite time interval $$(-\infty,\ \infty)$$ is defined by
-  - $$E_\infty = \lim_{T\rightarrow\infty} \int_{-T}^{T} |x(t)|^2\ dt = \int_{-\infty}^{\infty} |x(t)|^2\ dt$$
-  - $$E_\infty = \lim_{N\rightarrow\infty} \sum_{n=-N}^{N}|x[n]|^2 = \sum_{n=-\infty}^{\infty}|x[n]|^2$$
+  - $$E_\infty = \lim_{T\rightarrow\infty} \int_{-T}^{T} \|x(t)\|^2\ dt = \int_{-\infty}^{\infty} \|x(t)\|^2\ dt$$
+  - $$E_\infty = \lim_{N\rightarrow\infty} \sum_{n=-N}^{N}\|x[n]\|^2 = \sum_{n=-\infty}^{\infty}\|x[n]\|^2$$
 - Average power over infinite time interval is given by
-  - $$P_\infty = \lim_{T\rightarrow\infty} \frac{1}{2T}\int_{-T}^{T} |x(t)|^2\ dt$$
-  - $$P_\infty = \lim_{N\rightarrow\infty} \frac{1}{2N+1} \sum_{n=-N}^{N}|x[n]|^2$$
+  - $$P_\infty = \lim_{T\rightarrow\infty} \frac{1}{2T}\int_{-T}^{T} \|x(t)\|^2\ dt$$
+  - $$P_\infty = \lim_{N\rightarrow\infty} \frac{1}{2N+1} \sum_{n=-N}^{N}\|x[n]\|^2$$
 - Finite total energy means zero average power
 - Finite Average power means infinite total energy
 
@@ -46,11 +46,11 @@ permalink: /2023-spring/signals-and-systems/ct-and-dt
 
 ### Time Shift
 
-- A linear time shift signal transformation is given by $y = x(at+b)$
+- A linear time shift signal transformation is given by $$y = x(at+b)$$
 - $$b$$ represents a signal offset from $$0$$
 - a signal
-  - stretches if $$\|a\| > 1$$
-  - compresses if $$0 < \|a\| < 1$$
+  - stretches if $$\\|a\\| > 1$$
+  - compresses if $$0 < \\|a\\| < 1$$
   - reflects if $$a< 0$$
 
 ### Periodic Signals
@@ -98,11 +98,11 @@ $$
 - A energy over one period is given by
 
 $$
-E_{period} = \int_0^{T_0}|e^{j\omega_0t}|^2\ dt = \int_0^{T_0} dt = T_0
+E_{period} = \int_0^{T_0}\|e^{j\omega_0t}\|^2\ dt = \int_0^{T_0} dt = T_0
 $$
 
 $$
-|e^{j\omega_0t}| = |\cos\omega_0t+j\sin\omega_0t| = \sqrt{\cos^2\omega_0t+\sin^2\omega_0t} = 1
+\|e^{j\omega_0t}\| = \|\cos\omega_0t+j\sin\omega_0t\| = \sqrt{\cos^2\omega_0t+\sin^2\omega_0t} = 1
 $$
 
 - Therefore, average power over a period is given by
@@ -121,7 +121,7 @@ $$
     \end{align*}\\
     $$
     $$
-    |x(t)| = |e^{j2.5t}||2\cos(0.5t)| = 2|\cos(0.5t)|
+    \|x(t)\| = \|e^{j2.5t}\|\|2\cos(0.5t)\| = 2\|\cos(0.5t)\|
     $$
   - Therefore, the magnitude of the signal is $$2$$
 
@@ -186,7 +186,7 @@ $$
   - $$\delta(0)$$ is not really defined
   - $$\int_a^b \delta(t)dt = 1$$ if $$a <0$$ and $$b> 0$$
   - $$\int_a^b\delta(t)dt =0$$ if $$a>0$$ or $$b  <0$$
-  - $$\delta(\alpha t) = \frac{1}{|\alpha|}\delta(t)$$
+  - $$\delta(\alpha t) = \frac{1}{\|\alpha\|}\delta(t)$$
   - $$\delta(t) = \delta(-t)$$ (even function)
   - $$\delta(t) = \frac{d}{dt}u(t)$$ (relationship between unit impulse and step function)
   - $$f(t)\delta(t)=f(0)\delta(t)$$ (sampling property)
