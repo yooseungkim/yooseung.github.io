@@ -73,7 +73,7 @@ If two states are indistinguishable, then it can be merged into a single state. 
           \implies \delta^*(p, v) \in F \text{ and } \delta^*(q, v) \notin F
       $$
 
-          for some string $$v = aw  \in \Sigma^*$$. Therefore, if $$(p_a, q_a)$$  is distinguishable, then $$(p, q)$$ are distinguishable too.
+    for some string $$v = aw  \in \Sigma^*$$. Therefore, if $$(p_a, q_a)$$ is distinguishable, then $$(p, q)$$ are distinguishable too.
 
 ---
 
