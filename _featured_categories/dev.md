@@ -2,7 +2,7 @@
 layout: list
 title: Development
 permalink: /dev/
-slug: dev
+slug: Dev
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
   Development
