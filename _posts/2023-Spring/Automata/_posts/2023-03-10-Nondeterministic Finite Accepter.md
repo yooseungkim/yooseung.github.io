@@ -15,7 +15,7 @@ permalink: /2023-spring/automata/nfa
 
 > **Definition 2.4**
 
-A **\*\*\*\***nondeterministic finite accepter**\*\*\*\*** is defined by the quintuple
+A **nondeterministic finite accepter** is defined by the quintuple
 
 $$
 M=(Q,\Sigma, \delta, q_0, F),
@@ -41,9 +41,9 @@ A string is accepted by an nfa if there is some sequence of possible moves that 
 
 ## Extended Transition for NFA
 
-> ************\*\*\*\*************Definition 2.5************\*\*\*\*************
+> **Definition 2.5**
 
-For an nfa, the **extended transition function** is defined so that $$\delta^*(q_i, w)$$ contains $$q_j$$, if and only if there is a walk in the transition graph from $$q_i$$ to $$q_j$$ labeled $$w$$. (Similar to **\*\***Theorem 2.1**\*\***)
+For an nfa, the **extended transition function** is defined so that $$\delta^*(q_i, w)$$ contains $$q_j$$, if and only if there is a walk in the transition graph from $$q_i$$ to $$q_j$$ labeled $$w$$. (Similar to **Theorem 2.1**)
 
 ---
 
@@ -52,7 +52,7 @@ For an nfa, the **extended transition function** is defined so that $$\delta^*(q
   - $$\delta^*(q_1, a) = \{q_0, q_1, q_2\}$$ By using $$\lambda$$ -edge 0 or more times.
   - $$\delta^*(q_2, \lambda) = \{q_0, q_2\}$$ $$\lambda$$-edge may or may not be used.
 
-> \***\*Definition 2.6\*\***
+> **Definition 2.6**
 
 The language $$L$$ accepted by an nfa $$M=(Q,\Sigma, \delta, q_0, F)$$ is defined as the set of all strings accepted, formally
 

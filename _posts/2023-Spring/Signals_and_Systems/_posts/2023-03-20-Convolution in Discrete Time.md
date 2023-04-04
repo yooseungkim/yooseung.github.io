@@ -164,7 +164,7 @@ Note that $$(2)=h[n-1]$$ is signal obtained by shifting $$+1$$ unit from $$(1)=h
 
 ### Example 2
 
-Consider a LTI system in **********\*\***********Example 1**********\*\***********.
+Consider a LTI system in **Example 1**.
 
 For each particular $$n$$, we can consider some graphs as following.
 
@@ -181,7 +181,7 @@ For each particular $$n$$, we can consider some graphs as following.
   - $$y[3]=x[1]h[1]=2$$
 - For $$n>0$$, there is no overlap, so $$y[n]=0$$
 
-The result is consistent with ********\*\*********Example 1********\*\*********.
+The result is consistent with **Example 1**.
 
 ### Example 3
 

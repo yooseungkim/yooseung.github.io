@@ -29,7 +29,7 @@ As inaccessible states do not play any role in the automaton, it and its related
 
 > **Definition 2.8**
 
-Two states $$p$$ and $$q$$ of a dfa are ****************\*\*\*\*****************indistinguishable****************\*\*\*\***************** if
+Two states $$p$$ and $$q$$ of a dfa are **indistinguishable** if
 
 $$
 \delta^*(p, w) \in F \text{ implies } \delta^*(q, w) \in F
@@ -41,7 +41,7 @@ $$
 \delta^*(p, w) \notin F \text{ implies } \delta^*(q, w) \notin F
 $$
 
-Similarly, $$p$$ and $$q$$ are **distinguishable** if **\*\***$$\exists w \in \Sigma^*$$\*\* such that
+Similarly, $$p$$ and $$q$$ are **distinguishable** if **$$\exists w \in \Sigma^*$$** such that
 
 $$
 \delta^*(p, w) \in F \text{ and } \delta^*(q, w) \notin F
@@ -55,20 +55,23 @@ If two states are indistinguishable, then it can be merged into a single state. 
 
 ### Algorithm
 
-> ****\*\*****Procedure** \*\***mark\***\* ********\*\***********
+> **Procedure** _mark_
 
 1.  Remove all inaccessible states, by examining all simple paths from the initial state.
 2.  Consider all pairs of states $$(p, q)$$. By definition, if $$p \in F$$ and $$q \notin F$$ or vice versa, mark the pair as distinguishable.
     The process is starting from the final state (bottom-up), since those are the base case of distinguishable pairs.
 3.  Repeat the following step until no previously unmarked pairs are marked, i.e., no more marked pairs found.
+
     1. For all $$(p, q)$$ and all $$a\in \Sigma$$, compute $$\delta(p, a)=p_a$$ and $$\delta(q, a) = q_a$$.
     2. If exists some $$a$$ such that the pair $$(p_a, q_a)$$ is already marked then mark $$(p, q)$$ as distinguishable.
+
     - Detail
       $$(p_a, q_a)$$ is distinguishable means that
-          $$
+
+      $$
           \delta^*(\delta(p, a), w) \in F \text{ and } \delta^*(\delta(q, a), w) \notin F, \\
           \implies \delta^*(p, v) \in F \text{ and } \delta^*(q, v) \notin F
-          $$
+      $$
 
           for some string $$v = aw  \in \Sigma^*$$. Therefore, if $$(p_a, q_a)$$  is distinguishable, then $$(p, q)$$ are distinguishable too.
 
@@ -76,13 +79,13 @@ If two states are indistinguishable, then it can be merged into a single state. 
 
 > **Theorem 2.3**
 
-The procedure **\***mark**\*** terminates and determines all pairs of distinguishable states for any dfa $$M = (Q, \Sigma, \delta, q_0, F )$$
+The procedure _mark_ terminates and determines all pairs of distinguishable states for any dfa $$M = (Q, \Sigma, \delta, q_0, F )$$
 
 ---
 
 ### Proof by Correctness
 
-We need to prove two claims, that the **\***mark**\*** terminates (1) and that the **\***mark**\*** determines all pairs of distiniguishable states(2).
+We need to prove two claims, that the _mark_ terminates (1) and that the _mark_ determines all pairs of distiniguishable states(2).
 
 First, it is obvious that the procedure terminates, since there are finite number of states, there fore finite number of pairs to be marked.
 
@@ -100,7 +103,7 @@ $$
 
 with $$q_k$$ and $$q_l$$ are distinguishable by string $$w_n$$ of length $$n-1$$.
 
-Again, we will prove the claim with induction. Our **\*\***basis**\*\*** is $$n= 0.$$ That is, we will start with the states that can be distinguished with $$\lambda$$ . It is clear that $$\lambda$$ can distinguish non-final states and final states. Now ******\*\*******assume******\*\******* that our claim is true for $$i = 0, 1, \dots n-1$$.
+Again, we will prove the claim with induction. Our **basis** is $$n= 0.$$ That is, we will start with the states that can be distinguished with $$\lambda$$ . It is clear that $$\lambda$$ can distinguish non-final states and final states. Now **assume** that our claim is true for $$i = 0, 1, \dots n-1$$.
 
 By the assumption, it is clear that
 
@@ -109,4 +112,4 @@ By the assumption, it is clear that
 
 Therefore, after $$n$$th pass, all pairs that can be distinguished with $$w$$ such that $$\|w\|\le n$$ are all marked.
 
-Assume the **\***mark**\*** terminates after $$k$$ passes. Then no new state pair was marked during $$k$$th passes, i.e. marked pairs during $$k$$th and $$k+1$$th are the same. Thus, the procedure terminates and all distinguishable pairs are marked. (If $$\|w\|=n$$ cannot distinguish any state, so does $$\|w\|=n+1$$ )
+Assume the _mark_ terminates after $$k$$ passes. Then no new state pair was marked during $$k$$th passes, i.e. marked pairs during $$k$$th and $$k+1$$th are the same. Thus, the procedure terminates and all distinguishable pairs are marked. (If $$\|w\|=n$$ cannot distinguish any state, so does $$\|w\|=n+1$$ )

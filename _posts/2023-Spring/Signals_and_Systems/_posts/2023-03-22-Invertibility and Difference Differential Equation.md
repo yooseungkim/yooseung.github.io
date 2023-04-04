@@ -118,7 +118,7 @@ $$
 
 # Difference and Differential Equations
 
-Some causal LTI systems can be described by **********\***********linear, constant-coefficient, ordinary differential/difference equations,\*
+Some causal LTI systems can be described by **linear, constant-coefficient, ordinary differential/difference equations,**
 
 $$
 \frac{dy(t)}{dt} + ay(t) = bx(t)\\

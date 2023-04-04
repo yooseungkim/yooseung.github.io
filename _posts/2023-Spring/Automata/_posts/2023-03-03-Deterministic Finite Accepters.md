@@ -31,7 +31,7 @@ A dfa is assumed to be in the initial state $$q_0$$ at the initial time. It will
 
 ## Transition Graphs
 
-To visuallize and represent finite automata, we use **\*\***\*\*\*\***\*\***\*\***\*\***\*\*\*\***\*\***transition graphs**\*\***\*\*\*\***\*\***\*\***\*\***\*\*\*\***\*\***. The vertices represent states and edges represent transitions. Formally, if $$M=(Q, \Sigma, \delta,q_0, F)$$ is a dfa, then its associated transition graph $$G_M$$ has exactly $$\|Q\|$$ vertices (states). For every transition rule $$\delta(q_i,a)=q_j$$, the graph has an edge $$(q_i, q_j)$$ labeled $$a$$ .
+To visuallize and represent finite automata, we use **transition graphs**. The vertices represent states and edges represent transitions. Formally, if $$M=(Q, \Sigma, \delta,q_0, F)$$ is a dfa, then its associated transition graph $$G_M$$ has exactly $$\|Q\|$$ vertices (states). For every transition rule $$\delta(q_i,a)=q_j$$, the graph has an edge $$(q_i, q_j)$$ labeled $$a$$ .
 
 ## Extended Transition Function
 
@@ -101,11 +101,11 @@ Also, we can represent automata with the table, as seen below.
 
 ## Regular Languages
 
-The **family** of languages is a set of languages. There is the family of languages that is acepted by deterministic finite automata. We say the languages in this family of language are \***\*regular\*\***.
+The **family** of languages is a set of languages. There is the family of languages that is acepted by deterministic finite automata. We say the languages in this family of language are **regular**.
 
 > Definition 2.3
 
-A language $$L$$ is called **\*\***\*\*\*\***\*\***regular**\*\***\*\*\*\***\*\*** ↔ Exists some dfa $$M$$ such that
+A language $$L$$ is called **regular** ↔ Exists some dfa $$M$$ such that
 
 $$
 L=L(M)

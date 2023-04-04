@@ -11,7 +11,7 @@ permalink: /2023-spring/automata/equivalence-of-dfa-and-nfa
 
 To inspect the difference between nfa and dfa, we need to introduce the equivalence between automata.
 
-> ****\*\*\*\*****\*\*\*\*****\*\*\*\*****Definition 2.7****\*\*\*\*****\*\*\*\*****\*\*\*\*****
+> **Definition 2.7**
 
 Two finite accepters $$M_1$$ and $$M_2$$ are said to be **equivalent** if they both accept the same language,
 
@@ -43,9 +43,9 @@ $$
 
 ---
 
-We will prove the theorem by \***\*\*\*\*\*\***nfa-to-dfa\***\*\*\*\*\*\*** procedure. Before going on, remember that the every vertex in $$G_D$$ must have $$\|\Sigma\|$$ outgoing edges.
+We will prove the theorem by _nfa-to-dfa_ procedure. Before going on, remember that the every vertex in $$G_D$$ must have $$\|\Sigma\|$$ outgoing edges.
 
-> **Procedure** \***\*\*\*\*\***nfa-to-dfa\***\*\*\*\*\***
+> **Procedure** _nfa-to-dfa_
 
 1. Create a graph $$G_D$$ with vertex $$\{q_0\}$$ as the initial vertex.
    ※ Note that the label is a set of states.
@@ -59,7 +59,7 @@ We will prove the theorem by \***\*\*\*\*\*\***nfa-to-dfa\***\*\*\*\*\*\*** proc
 
 We are now arguing that any nfa can be converted into dfa. But we need to prove that this procedure gives the correct answer. Therefore, we will prove the **correctness** of the procedure by induction on the length of the input string.
 
-By \***\*\*\*\*\*\***nfa-to-dfa\***\*\*\*\*\*\*** procedure, any nfa can be converted into the equivalent dfa.
+By _nfa-to-dfa_ procedure, any nfa can be converted into the equivalent dfa.
 
 - **Proof**
   **Assume** that $$\forall v$$ s.t. $$\|v\|\le n$$, the existence of a walk labeled $$v$$ from $$q_0$$ to $$q_i$$ in $$G_N$$ implies that there is a walk labeled $$v$$ from $$\{q_0\}$$ to state $$Q_i=\{\dots,\ q_i,\ \dots \}$$ in $$G_D$$.
