@@ -1,9 +1,0 @@
----
----
-
-$$
-\begin{align*}
-F[A\cos(w_0t ) ]& = A\int_{-\infty}^{\infty}\frac{e^{j\omega_0t} - e^{-j\omega_0t}}{2j}e^{-j\omega t}dt \\
-&=
-\end{align*}
-$$
