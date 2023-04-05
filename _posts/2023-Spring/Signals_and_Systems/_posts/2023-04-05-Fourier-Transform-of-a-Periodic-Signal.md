@@ -5,7 +5,7 @@ tags: [Signals-and-Systems]
 permalink: /2023-spring/signals-and-systems/fourier-series-and-transform
 ---
 
-# Fourier Series와 Fourier Transform에 대한 이해
+# Fourier Series와 Transform에 대한 이해
 
 # Fourier Series
 
