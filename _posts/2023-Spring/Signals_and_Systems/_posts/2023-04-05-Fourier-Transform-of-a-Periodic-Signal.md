@@ -231,49 +231,62 @@ $$
 $$
 
 - Integration:
+
   $$
   \mathcal{F}\bigg[\int_{-\infty}^tx(\tau)d\tau\bigg]= \frac{1}{j\omega}X(j\omega)+\pi X(0)\delta(\omega)
   $$
+
   - 마지막 $$\pi X(0)\delta(\omega)$$는 평균 에너지의 직류로 이해할 수 있다. 자세한 유도는 다음과 같다.
-  $$
-  \begin{align*}
-  \int_{-\infty}^{t}x(\tau)d\tau &= \int_{-\infty}^{\infty}x(\tau)u(t-\tau)d\tau \\
-  &= X(j\omega)U(j\omega)\\
-  &= X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))\\
-  &= \frac{X(j\omega)}{j\omega}+\pi X(0)\delta(\omega)
-  \end{align*}
-  $$
+    $$
+    \begin{align*}
+    \int_{-\infty}^{t}x(\tau)d\tau &= \int_{-\infty}^{\infty}x(\tau)u(t-\tau)d\tau \\
+    &= X(j\omega)U(j\omega)\\
+    &= X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))\\
+    &= \frac{X(j\omega)}{j\omega}+\pi X(0)\delta(\omega)
+    \end{align*}
+    $$
   - 이때, $$U(j\omega)$$는 다음과 같이 구할 수 있다.
+
     $$
     u'(t) = \delta(t)\\
     j\omega U(j\omega) = \mathcal{F}[u(t)'] = 1\\
     U(j\omega ) = \frac{1}{j\omega} + c\delta(\omega)\\
     $$
+
     $$u(0)=\frac{1}{2}$$으로 정의할 수 있으므로 (계단함수의 정의는 필요에 따라 바뀔 수 있다.)
+
     $$
     \begin{align*}u(0) &=\frac{1}{2\pi}\int_{-\infty}^{\infty}U(j\omega)e^{j\omega t}d\omega \\
     &= \frac{1}{2\pi} \int_{-\infty}^{\infty}c\delta(\omega)d\omega \\
     &=\frac{1}{2\pi}c = \frac{1}{2}
     \end{align*}
     $$
+
     따라서, $$c = \pi$$이므로, $$U(j\omega) = \frac{1}{j\omega}+\pi\delta(\omega)$$이다.
     또는 signum 함수를 이용하여 계산할 수 있다.
+
     $$
     \text{sgn}(x) = \begin{cases} 1 & x > 0\\
     0 & x = 0 \\
     -1 & x < 0
     \end{cases}
     $$
+
     $$u(t)$$를 signum 함수를 이용하여 나타내면 다음과 같다.
+
     $$
     u(t)= \frac{1}{2}(1+\text{sgn}(t))
     $$
+
     이는 앞서 이용한 계단함수의 정의와 같다. $$(u(0)=0.5)$$
     그리고, signum 함수는 극한을 이용해 다음과 같이 나타낼 수 있다.
+
     $$
     \text{sgn}(t) = \lim_{a\rightarrow0} [e^{-at}u(t)-e^{at}u(-t)]
     $$
+
     이를 이용해서 $$U(j\omega)$$를 계산해보자.
+
     $$
     \begin{align*}
     U(j\omega)&= \int_{-\infty}^{\infty}\frac{1}{2}\big[1+ \lim_{a\rightarrow 0}[e^{-at}u(t)-e^{at}u(-t)]\big]e^{-j\omega t}dt\\
@@ -283,6 +296,7 @@ $$
     &= \frac{1}{j\omega}+\pi\delta(\omega)
     \end{align*}
     $$
+
 - Duality: A의 Fourier transform이 B라고 하자. 그렇다면 B의 Fourier Transform도 A이다. (inverse Fourier Transform이 아니다) 예를 들어 rectangle pulse의 Fourier Transfrom은 sinc function이며, sincfunction의 Fourier transform 또한 rectangle pulse이다.
 
 $$
