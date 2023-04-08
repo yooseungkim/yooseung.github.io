@@ -221,7 +221,7 @@ $$
 - Time and Period scaling:
 
 $$
-\mathcal{F}[x(at)]= \frac{\|a\|}X(\frac{j\omega}a)
+\mathcal{F}[x(at)]= \frac{1}{\|a\|}X(\frac{j\omega}a)
 $$
 
 - Differentiation:
