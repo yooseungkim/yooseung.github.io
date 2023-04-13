@@ -20,7 +20,7 @@ Fourier Transform은 Time-domain에서의 signal을 frequency-domain에서의 �
 
 Fourier Transform의 결과가 복소함수인 만큼 직관적 이해를 위해서는 그 크기, $$\|X(j\omega)\|$$를 plotting 한다고 가정하자. 앞선 예시에 따르면 해당 signal은 frequency가 1, 1.5인 성분밖에 없으므로, 해당 \frequency를 제외하면 0이 될 것이다. 정확히는, $$\pm1,\ \pm1.5$$를 제외하고 0이 될 것이다. 그리고 그 세기는, $$\pm1.5$$ 성분의 값이 2배 더 강할 것이다. 왜냐하면, time-domain에서의 세기가 더 강하기 때문이다.
 
-이러한 결과를 종합해보면, $$|X(j\omega)|$$ 의 그래프는 다음과 같이 그려진다.
+이러한 결과를 종합해보면, $$\|X(j\omega)\|$$ 의 그래프는 다음과 같이 그려진다.
 
 ![img](../../../assets/img/../../../assets/img/src/2023-Spring/sin_cos_fourier.jpeg)
 
